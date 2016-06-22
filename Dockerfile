@@ -4,7 +4,7 @@ MAINTAINER Sebastian Schneider <mail@sesc.eu>
 RUN [ "cross-build-start" ]
 
 RUN apt-get update \
-    && apt-get upgrade \
+    && apt-get upgrade -y \
     && apt-get install -y ruby build-essential curl python git unzip
 
 RUN curl -O http://node-arm.herokuapp.com/node_latest_armhf.deb \
