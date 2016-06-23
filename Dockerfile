@@ -10,9 +10,10 @@ RUN apt-get update \
 RUN curl -O http://node-arm.herokuapp.com/node_latest_armhf.deb \
     && dpkg -i node_latest_armhf.deb
 
-RUN curl -O dashing.zip https://github.com/Shopify/dashing/zipball/master \
-    && unzip dashing.zip "Shopify-dashing-*/*" -d /dashing \
-    && rm dashing.zip
+RUN curl -O dashing.zip https://github.com/Shopify/dashing/zipball/master
+
+#    && unzip dashing.zip "Shopify-dashing-*/*" -d /dashing \
+#    && rm dashing.zip
 
 RUN [ "cross-build-end" ]
 
